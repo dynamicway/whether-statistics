@@ -1,11 +1,11 @@
-package us.util.moldivewheather
+package us.util.maldiveswhether
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class MoldiveWheatherApplication
+class MaldivesWhetherApplication
 
 fun main(args: Array<String>) {
-    runApplication<MoldiveWheatherApplication>(*args)
+    runApplication<MaldivesWhetherApplication>(*args)
 }

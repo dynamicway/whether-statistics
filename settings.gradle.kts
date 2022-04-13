@@ -4,4 +4,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = "moldive-wheather"
+rootProject.name = "maldives-whether"
