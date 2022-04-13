@@ -1,8 +1,7 @@
 package us.util.maldiveswhether.application.`in`
 
-class GetAverageResponse(
+data class GetAverageResponse(
     val temp: Double,
-    val windSpeed: Double,
     val humidity: Double,
     val barometer: Double,
     val precipitationProbability: Double,
