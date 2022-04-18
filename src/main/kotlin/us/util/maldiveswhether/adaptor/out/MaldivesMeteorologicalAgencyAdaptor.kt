@@ -16,7 +16,7 @@ class MaldivesMeteorologicalAgencyAdaptor(
         val maldivesWhetherDtos = mutableListOf<MaldivesWhetherDto>()
 
         dates.forEach {
-            val whetherString = meteorologicalAgencyClient.getWhether(it, it.dayOfMonth, it.dayOfYear)
+            val whetherString = meteorologicalAgencyClient.getWhether(it, it.monthValue, it.year)
             maldivesWhetherDtos.addAll(maldivesWhetherDtoMapper.mapByString(whetherString))
         }
         return maldivesWhetherDtos
