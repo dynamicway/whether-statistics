@@ -12,7 +12,7 @@ class MaldivesWhetherDtoMapper {
         return hFields.map { MaldivesWhetherDto(
             time = it.key,
             temp = it.value[1].substring(it.value[1].indexOf('"') + 1, it.value[1].indexOf('&')).toInt(),
-            humidity = it.value[5].substring(it.value[5].indexOf('"') + 1, it.value[5].indexOf('%')).toInt(),
+            humidity = if (it.value[5].contains("N\\/A")) 0 else it.value[5].substring(it.value[5].indexOf('"') + 1, it.value[5].indexOf('%')).toInt(),
             barometer = if (it.value[6].contains("N\\/A")) 0 else it.value[6].substring(it.value[6].indexOf('"') + 1, it.value[6].indexOfLast { it == ' ' }).toInt(),
             whether = it.value[2].substring(it.value[2].indexOf('"') + 1, it.value[2].length)
         ) }
